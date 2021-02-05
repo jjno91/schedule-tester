@@ -4,6 +4,8 @@ on:
   workflow_dispatch:
   schedule:
     - cron: "*/5 * * * *"
+env:
+  REPO: ${GITHUB_REPOSITORY}
 jobs:
   schedule:
     runs-on: ubuntu-latest
