@@ -14,3 +14,4 @@ jobs:
           echo "${{ github.event.repository.name }}"
           echo $GITHUB_REPOSITORY
           echo $REPO
+          echo "${{ toJson(github) }}"
