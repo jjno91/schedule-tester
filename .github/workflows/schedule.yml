@@ -1,10 +1,11 @@
 name: schedule
 on:
+  push:
   workflow_dispatch:
   schedule:
     - cron: "*/5 * * * *"
 env:
-  REPO: ${GITHUB_REPOSITORY}
+  REPO: ${{ env.GITHUB_REPOSITORY }}
 jobs:
   schedule:
     runs-on: ubuntu-latest
