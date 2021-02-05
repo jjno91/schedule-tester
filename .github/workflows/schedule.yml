@@ -12,6 +12,7 @@ jobs:
     steps:
       - name: init
         run: |
+          echo ${GITHUB_REPOSITORY} | sed -e 's|.*/||'
           echo "${{ github.event.repository.name }}"
           echo $GITHUB_REPOSITORY
           echo $REPO
