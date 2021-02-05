@@ -9,10 +9,10 @@ jobs:
     steps:
       - name: init
         run: |
-          echo ${{ github.event.repository.name }}
+          echo "${{ github.event.repository.name }}"
           echo
           echo
           env
           echo
           echo
-          echo ${{ toJson(github) }}
+          echo "${{ toJson(github) }}"
