@@ -2,7 +2,9 @@ name: schedule
 on:
   workflow_dispatch:
   schedule:
-    - cron: "* * * * *"
+    - cron: "*/5 * * * *"
+env:
+  REPO: ${GITHUB_REPOSITORY}
 jobs:
   schedule:
     runs-on: ubuntu-latest
@@ -10,9 +12,5 @@ jobs:
       - name: init
         run: |
           echo "${{ github.event.repository.name }}"
-          echo
-          echo
-          env
-          echo
-          echo
-          echo "${{ toJson(github) }}"
+          echo $GITHUB_REPOSITORY
+          echo $REPO
